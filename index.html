@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pure Honey Premium</title>
+
+<style>
+body{
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  background:linear-gradient(135deg,#1a1a1a,#2c3e50);
+  color:#fff;
+}
+
+/* ====== SLIDER HEADER ====== */
+.slider{
+  position:relative;
+  width:100%;
+  height:350px;
+  overflow:hidden;
+}
+.slide{
+  position:absolute;
+  width:100%;
+  height:100%;
+  opacity:0;
+  transition:opacity 1s ease-in-out;
+}
+.slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.active{
+  opacity:1;
+}
+
+/* ====== SECTION TITLE ====== */
+.section-title{
+  text-align:center;
+  font-size:32px;
+  margin:40px 0 20px;
+  font-weight:bold;
+  color:#ffcc00;
+}
+
+/* ====== PRODUCT GALLERY ====== */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  padding:20px;
+}
+.card{
+  background:rgba(255,255,255,0.05);
+  border-radius:20px;
+  padding:15px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,.5);
+  transition:transform 0.3s ease;
+}
+.card:hover{
+  transform:scale(1.05);
+}
+.card img{
+  width:100%;
+  border-radius:15px;
+  margin-bottom:15px;
+}
+.card ul{
+  text-align:left;
+  list-style:none;
+  padding:0;
+}
+.card ul li{
+  margin-bottom:8px;
+  padding-left:20px;
+  position:relative;
+}
+.card ul li::before{
+  content:"✔";
+  position:absolute;
+  left:0;
+  color:#00ff00;
+}
+
+/* ====== MOVING BUTTON ====== */
+.order-btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:12px 30px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+  color:#fff;
+  background:linear-gradient(45deg,#ff8c00,#ff0000);
+  animation:moveBtn 1.5s infinite;
+}
+@keyframes moveBtn{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-5px);}
+  100%{transform:translateY(0);}
+}
+
+/* ====== VIDEO ====== */
+.video-section{
+  padding:30px;
+  text-align:center;
+}
+.video-section iframe{
+  width:100%;
+  max-width:800px;
+  height:400px;
+  border-radius:20px;
+}
+
+/* ====== ORDER FORM ====== */
+.order-box{
+  background:#111;
+  margin:40px 20px;
+  padding:30px;
+  border-radius:20px;
+}
+input{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:8px;
+  border:none;
+}
+.submit-btn{
+  width:100%;
+  padding:15px;
+  background:#00cc44;
+  border:none;
+  border-radius:10px;
+  font-weight:bold;
+  cursor:pointer;
+}
+.quantity-box{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin:15px 0;
+}
+.quantity-box button{
+  width:40px;
+  height:40px;
+  font-size:20px;
+}
+
+/* SUCCESS */
+.success-overlay{
+  position:fixed;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#d4edda;
+  color:#155724;
+  padding:20px 30px;
+  border-radius:10px;
+  display:none;
+}
+
+/* FLOAT BUTTONS */
+.float-buttons{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+.float-buttons a{
+  width:50px;
+  height:50px;
+  background:#25d366;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.float-buttons a.messenger{
+  background:#0084ff;
+}
+.float-buttons img{
+  width:25px;
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER SLIDER ===== -->
+<div class="slider">
+  <div class="slide active"><img src="IMAGE1.jpg"></div>
+  <div class="slide"><img src="IMAGE2.jpg"></div>
+  <div class="slide"><img src="IMAGE3.jpg"></div>
+  <div class="slide"><img src="IMAGE4.jpg"></div>
+  <div class="slide"><img src="IMAGE5.jpg"></div>
+</div>
+
+<h2 class="section-title">🍯 ১০০% বিশুদ্ধ প্রাকৃতিক মধু</h2>
+
+<!-- ===== YOUTUBE VIDEO ===== -->
+<div class="video-section">
+<iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+</div>
+
+<!-- ===== GALLERY ===== -->
+<div class="gallery">
+
+<div class="card">
+<img src="HONEY1.jpg">
+<ul>
+<li>🌿 সম্পূর্ণ কাঁচা ও প্রাকৃতিক সংগ্রহ</li>
+<li>💪 রোগ প্রতিরোধ ক্ষমতা বৃদ্ধি করে</li>
+<li>🔥 শক্তি ও স্ট্যামিনা বাড়ায়</li>
+<li>👨‍👩‍👧‍👦 শিশু থেকে বৃদ্ধ সকলের জন্য নিরাপদ</li>
+</ul>
+<a href="#order" class="order-btn">অর্ডার করতে চাই</a>
+</div>
+
+<div class="card">
+<img src="HONEY2.jpg">
+<ul>
+<li>🍃 সুন্দরবনের প্রিমিয়াম ফুলের মধু</li>
+<li>🧪 কোন প্রকার কেমিক্যাল মিশ্রিত নয়</li>
+<li>💛 হার্ট ও লিভারের জন্য উপকারী</li>
+<li>📦 নিরাপদ প্যাকেজিং</li>
+</ul>
+<a href="#order" class="order-btn">অর্ডার করতে চাই</a>
+</div>
+
+<div class="card">
+<img src="HONEY3.jpg">
+<ul>
+<li>🌼 সরিষা ফুলের বিশুদ্ধ মধু</li>
+<li>⚡ তাত্ক্ষণিক এনার্জি দেয়</li>
+<li>🩺 সর্দি-কাশিতে কার্যকরী</li>
+<li>🏆 গ্রাহক সন্তুষ্টি ১০০%</li>
+</ul>
+<a href="#order" class="order-btn">অর্ডার করতে চাই</a>
+</div>
+
+<div class="card">
+<img src="HONEY4.jpg">
+<ul>
+<li>🌺 লিচু ফুলের প্রিমিয়াম মধু</li>
+<li>✨ ত্বকের জন্য উপকারী</li>
+<li>🧘 শরীর সতেজ রাখে</li>
+<li>🚚 সারা বাংলাদেশে হোম ডেলিভারি</li>
+</ul>
+<a href="#order" class="order-btn">অর্ডার করতে চাই</a>
+</div>
+
+<div class="card">
+<img src="HONEY5.jpg">
+<ul>
+<li>🍯 ঘন ও সুগন্ধযুক্ত আসল মধু</li>
+<li>📈 নিয়মিত সেবনে শক্তি বৃদ্ধি</li>
+<li>🌟 ১০০% গ্যারান্টিযুক্ত বিশুদ্ধতা</li>
+<li>💵 সাশ্রয়ী মূল্য</li>
+</ul>
+<a href="#order" class="order-btn">অর্ডার করতে চাই</a>
+</div>
+
+</div>
+
+<!-- ===== ORDER FORM ===== -->
+<div class="order-box" id="order">
+<h2>অর্ডার ফর্ম</h2>
+<form id="orderForm">
+<input type="text" id="name" placeholder="নাম" required>
+<input type="tel" id="phone" placeholder="মোবাইল" required>
+<input type="text" id="address" placeholder="ঠিকানা" required>
+
+<div class="quantity-box">
+<button type="button" onclick="changeQty(-1)">-</button>
+<span id="qty">1</span>
+<button type="button" onclick="changeQty(1)">+</button>
+</div>
+
+<div>মোট মূল্য: ৳ <span id="total">1200</span></div>
+
+<button type="submit" class="submit-btn">অর্ডার কনফার্ম করুন</button>
+</form>
+</div>
+
+<div class="success-overlay" id="successMsg">
+✅ ধন্যবাদ! আপনার অর্ডার সাবমিট হয়েছে।
+</div>
+
+<!-- FLOAT BUTTONS -->
+<div class="float-buttons">
+<a href="YOUR_WHATSAPP_LINK"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"></a>
+<a href="YOUR_MESSENGER_LINK" class="messenger"><img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Facebook_Messenger_4_Logo.svg"></a>
+</div>
+
+<script>
+let slides=document.querySelectorAll('.slide');
+let index=0;
+setInterval(()=>{
+  slides[index].classList.remove('active');
+  index=(index+1)%slides.length;
+  slides[index].classList.add('active');
+},1000);
+
+let price=1200;
+let qty=1;
+function changeQty(change){
+  qty+=change;
+  if(qty<1) qty=1;
+  document.getElementById("qty").innerText=qty;
+  document.getElementById("total").innerText=price*qty;
+}
+</script>
+
+</body>
+</html>
