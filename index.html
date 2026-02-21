@@ -32,9 +32,11 @@ body{
   height:100%;
   object-fit:cover;
 }
-.active{ opacity:1; }
+.active{
+  opacity:1;
+}
 
-/* ====== TITLE ====== */
+/* ====== SECTION TITLE ====== */
 .section-title{
   text-align:center;
   font-size:32px;
@@ -43,19 +45,7 @@ body{
   color:#ffcc00;
 }
 
-/* ====== VIDEO ====== */
-.video-section{
-  padding:30px;
-  text-align:center;
-}
-.video-section iframe{
-  width:100%;
-  max-width:800px;
-  height:400px;
-  border-radius:20px;
-}
-
-/* ====== GALLERY ====== */
+/* ====== PRODUCT GALLERY ====== */
 .gallery{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -68,18 +58,20 @@ body{
   padding:15px;
   text-align:center;
   box-shadow:0 10px 25px rgba(0,0,0,.5);
-  transition:0.3s;
+  transition:transform 0.3s ease;
 }
-.card:hover{ transform:scale(1.05); }
+.card:hover{
+  transform:scale(1.05);
+}
 .card img{
   width:100%;
   border-radius:15px;
   margin-bottom:15px;
 }
 .card ul{
+  text-align:left;
   list-style:none;
   padding:0;
-  text-align:left;
 }
 .card ul li{
   margin-bottom:8px;
@@ -93,7 +85,7 @@ body{
   color:#00ff00;
 }
 
-/* ====== BUTTON ====== */
+/* ====== MOVING BUTTON ====== */
 .order-btn{
   display:inline-block;
   margin-top:10px;
@@ -109,6 +101,18 @@ body{
   0%{transform:translateY(0);}
   50%{transform:translateY(-5px);}
   100%{transform:translateY(0);}
+}
+
+/* ====== VIDEO ====== */
+.video-section{
+  padding:30px;
+  text-align:center;
+}
+.video-section iframe{
+  width:100%;
+  max-width:800px;
+  height:400px;
+  border-radius:20px;
 }
 
 /* ====== ORDER FORM ====== */
@@ -180,26 +184,14 @@ input{
 .float-buttons a.messenger{
   background:#0084ff;
 }
-.float-buttons img{ width:25px; }
-
-/* ===== FOOTER ===== */
-.footer{
-  background:#111;
-  text-align:center;
-  padding:25px 15px;
-  font-size:14px;
-  color:#ccc;
-}
-.footer a{
-  color:#00ff00;
-  text-decoration:none;
-  font-weight:bold;
+.float-buttons img{
+  width:25px;
 }
 </style>
 </head>
 <body>
 
-<!-- HEADER SLIDER -->
+<!-- ===== HEADER SLIDER ===== -->
 <div class="slider">
   <div class="slide active"><img src="IMAGE1.jpg"></div>
   <div class="slide"><img src="IMAGE2.jpg"></div>
@@ -210,26 +202,78 @@ input{
 
 <h2 class="section-title">🍯 ১০০% বিশুদ্ধ প্রাকৃতিক মধু</h2>
 
-<!-- VIDEO -->
+<!-- ===== YOUTUBE VIDEO ===== -->
 <div class="video-section">
 <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
 </div>
 
-<!-- GALLERY -->
+<!-- ===== GALLERY ===== -->
 <div class="gallery">
 
-<!-- 5 Honey Cards Same As Before -->
-<!-- (সংক্ষেপে একই কার্ডগুলো থাকবে) -->
+<div class="card">
+<img src="HONEY1.jpg">
+<ul>
+<li>🌿 সম্পূর্ণ কাঁচা ও প্রাকৃতিক সংগ্রহ</li>
+<li>💪 রোগ প্রতিরোধ ক্ষমতা বৃদ্ধি করে</li>
+<li>🔥 শক্তি ও স্ট্যামিনা বাড়ায়</li>
+<li>👨‍👩‍👧‍👦 শিশু থেকে বৃদ্ধ সকলের জন্য নিরাপদ</li>
+</ul>
+<a href="#order" class="order-btn">অর্ডার করতে চাই</a>
+</div>
+
+<div class="card">
+<img src="HONEY2.jpg">
+<ul>
+<li>🍃 সুন্দরবনের প্রিমিয়াম ফুলের মধু</li>
+<li>🧪 কোন প্রকার কেমিক্যাল মিশ্রিত নয়</li>
+<li>💛 হার্ট ও লিভারের জন্য উপকারী</li>
+<li>📦 নিরাপদ প্যাকেজিং</li>
+</ul>
+<a href="#order" class="order-btn">অর্ডার করতে চাই</a>
+</div>
+
+<div class="card">
+<img src="HONEY3.jpg">
+<ul>
+<li>🌼 সরিষা ফুলের বিশুদ্ধ মধু</li>
+<li>⚡ তাত্ক্ষণিক এনার্জি দেয়</li>
+<li>🩺 সর্দি-কাশিতে কার্যকরী</li>
+<li>🏆 গ্রাহক সন্তুষ্টি ১০০%</li>
+</ul>
+<a href="#order" class="order-btn">অর্ডার করতে চাই</a>
+</div>
+
+<div class="card">
+<img src="HONEY4.jpg">
+<ul>
+<li>🌺 লিচু ফুলের প্রিমিয়াম মধু</li>
+<li>✨ ত্বকের জন্য উপকারী</li>
+<li>🧘 শরীর সতেজ রাখে</li>
+<li>🚚 সারা বাংলাদেশে হোম ডেলিভারি</li>
+</ul>
+<a href="#order" class="order-btn">অর্ডার করতে চাই</a>
+</div>
+
+<div class="card">
+<img src="HONEY5.jpg">
+<ul>
+<li>🍯 ঘন ও সুগন্ধযুক্ত আসল মধু</li>
+<li>📈 নিয়মিত সেবনে শক্তি বৃদ্ধি</li>
+<li>🌟 ১০০% গ্যারান্টিযুক্ত বিশুদ্ধতা</li>
+<li>💵 সাশ্রয়ী মূল্য</li>
+</ul>
+<a href="#order" class="order-btn">অর্ডার করতে চাই</a>
+</div>
 
 </div>
 
-<!-- ORDER FORM -->
+<!-- ===== ORDER FORM ===== -->
 <div class="order-box" id="order">
 <h2>অর্ডার ফর্ম</h2>
 <form id="orderForm">
-<input type="text" placeholder="নাম" required>
-<input type="tel" placeholder="মোবাইল" required>
-<input type="text" placeholder="ঠিকানা" required>
+<input type="text" id="name" placeholder="নাম" required>
+<input type="tel" id="phone" placeholder="মোবাইল" required>
+<input type="text" id="address" placeholder="ঠিকানা" required>
 
 <div class="quantity-box">
 <button type="button" onclick="changeQty(-1)">-</button>
@@ -246,14 +290,11 @@ input{
 <div class="success-overlay" id="successMsg">
 ✅ ধন্যবাদ! আপনার অর্ডার সাবমিট হয়েছে।
 </div>
-
 <!-- ===== FOOTER WITH YOUR WEBSITE LINK ===== -->
 <div class="footer">
 <p>© 2026 Your Company | All Rights Reserved</p>
 <p>Design By <a href="https://yourwebsite.com" target="_blank">GreenLine IT</a></p>
 </div>
-
-
 <!-- FLOAT BUTTONS -->
 <div class="float-buttons">
 <a href="YOUR_WHATSAPP_LINK"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"></a>
